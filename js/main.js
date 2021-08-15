@@ -5,6 +5,9 @@ const apiKey = '8de499325df134207967538caa8f36b5'
 $(document).ready(() => {
     if (document.title ==="Watch Movies")
     {
+        $('#searchForm').submit( function(e){ 
+            e.preventDefault();
+        })
         let searchText = $('#searchText').val();
         getMovies(searchText);
         $('#searchForm').on("input", (e) => {
