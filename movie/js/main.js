@@ -5,15 +5,17 @@ const apiKey = '8de499325df134207967538caa8f36b5'
 $(document).ready(() => {
     let searchParams = new URLSearchParams(window.location.search);
     if (searchParams.has('id')) {
-        let movieId = searchParams.get('id') 
-        getMovie(movieId)
+        let movieId = searchParams.get('id') ;
+        getMovie(movieId);
+    } else {
+        window.location.href = "../";
     }
 });
 
 
 
 function getMovie(movieId) {;
-    let getMovieUrl = `${baseUrl}movie/${movieId}?api_key=${apiKey}`
+    let getMovieUrl = `${baseUrl}movie/${movieId}?api_key=${apiKey}`;
     $.ajax({
         type: "GET",
         url: getMovieUrl,
@@ -50,12 +52,12 @@ function getMovie(movieId) {;
             $('#movie').html(output);
             if (movie.title == movie.original_title)
                 $('#originalTitle').css('display', 'none');
-            output = `<iframe allowfullscreen="allowfullscreen" id="iframe" sandbox = "allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation" src="https://www.2embed.ru/embed/imdb/movie?id=${movie.imdb_id}" width="100" height="100" frameborder="0"></iframe>`
+            output = `<iframe id="iframe" sandbox = "allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation" src="https://www.2embed.ru/embed/imdb/movie?id=${movie.imdb_id}"  height="100%" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" frameborder="0"></iframe>`
             $('#embed').html(output);
         },
         error: function (xhr,status,error) {
-            console.log(error)
-            window.location.href = "../"
+            console.log(error);
+            window.location.href = "../";
         }
     });
 }

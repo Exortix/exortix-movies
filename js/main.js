@@ -44,7 +44,7 @@ function getMovies(searchText) {
             $('#movies > .row').html(output);
         },
         error: function (xhr,status,error) {
-            console.log(error)
+            console.log(error);
         }
     });
 }
