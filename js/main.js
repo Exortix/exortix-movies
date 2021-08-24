@@ -40,47 +40,49 @@ $("#login").submit((e)=>{
     }
 });
 $(document).ready(() => {
-    loggedIn = (localStorage.getItem('logindataformovie') == `user=${user}&pass=${pass}`)
-    if (loggedIn) {
+    if (localStorage.getItem('logindataformovie') == `user=${user}&pass=${pass}`) {
         loggedInUser()
     }
 });
 
 function loggedInUser()
 {
-document.body.innerHTML =   `
-    
-<nav class="navbar navbar-dark bg-dark">
-    <div class="container">
-        <div class="navbar-header">
-            <a href="" class="navbar-brand">Exortix Movies</a>
-        </div>
-        <form action="" id="searchForm">
-            <input type="text" name="" id="searchText" class="form-control" placeholder="Search Movies">
-        </form>
-    </div>
-</nav>
-
-<div class="container" style="visibility: hidden;">
-    <div class="jumbotron">
-        <h3 class="text-center">My<strong>Movie</strong>Search</h3>
-        <form action="" id="searchForm">
-            <input type="text" name="" id="searchText" class="form-control" placeholder="Search Movies">
-        </form>
-    </div>
-</div>
-
-<div class="container" id="movies">
-    <div class="row">
-        
-    </div>
-</div>
-<!-- Option 1: Bootstrap Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="js/main.js"></script>
-`
 $(document).ready(() => {
+    document.title ="Watch Movies"
+    document.body.innerHTML =   `
+        
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="" class="navbar-brand">Exortix Movies</a>
+            </div>
+            <form action="" id="searchForm">
+                <input type="text" name="" id="searchText" class="form-control" placeholder="Search Movies">
+            </form>
+        </div>
+    </nav>
+
+    <div class="container" style="visibility: hidden;">
+        <div class="jumbotron">
+            <h3 class="text-center">My<strong>Movie</strong>Search</h3>
+            <form action="" id="searchForm">
+                <input type="text" name="" id="searchText" class="form-control" placeholder="Search Movies">
+            </form>
+        </div>
+    </div>
+
+    <div class="container" id="movies">
+        <div class="row">
+            
+        </div>
+    </div>
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/main.js"></script>
+    `
+
+
     $('#searchForm').submit( function(e){ 
         e.preventDefault();
     })
