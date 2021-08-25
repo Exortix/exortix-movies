@@ -23,6 +23,16 @@ function login(username, password) {
     }
 }
 
+
+
+$('input#username').keyup((e) => { 
+    document.querySelector('input#username').value = document.querySelector('input#username').value.toLowerCase();
+});
+
+$('input#username').change((e) => { 
+    document.querySelector('input#username').value = document.querySelector('input#username').value.toLowerCase();
+});
+
 $("#login").submit((e)=>{
     e.preventDefault();
     let status = login(text2Binary(stringReverse($("#login").serializeArray()[0].value)), text2Binary(stringReverse($("#login").
