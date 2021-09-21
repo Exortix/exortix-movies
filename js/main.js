@@ -71,12 +71,9 @@ $(document).ready(() => {
         </div>
     </nav>
 
-    <div class="container" style="visibility: hidden;">
+    <div class="container" style="visibility: visible;">
         <div class="jumbotron">
-            <h3 class="text-center">My<strong>Movie</strong>Search</h3>
-            <form action="" id="searchForm">
-                <input type="text" name="" id="searchText" class="form-control" placeholder="Search Movies">
-            </form>
+            <h6 class="text-center">Only For<strong> Educational Purposes</strong><br><a target="_blank" href= "https://ublockorigin.com/">Download Adblocker for the best experience</a></h6>
         </div>
     </div>
 
@@ -90,7 +87,6 @@ $(document).ready(() => {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/main.js"></script>
     `
-
 
     $('#searchForm').submit( function(e){ 
         e.preventDefault();
