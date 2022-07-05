@@ -60,7 +60,7 @@ function getMovie(movieId) {
             $('#movie').html(output);
             if (movie.title == movie.original_title)
                 $('#originalTitle').css('display', 'none');
-            output = `<iframe id="iframe" src="https://www.2embed.ru/embed/imdb/movie?id=${movie.imdb_id}"  height="100%" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" frameborder="0"></iframe>`
+            output = `<iframe id="iframe" src="https://www.2embed.to/embed/imdb/movie?id=${movie.imdb_id}"  height="100%" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" frameborder="0"></iframe>`
             $('#embed').html(output);
         },
         error: function (xhr,status,error) {
